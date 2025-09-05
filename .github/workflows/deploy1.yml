@@ -35,9 +35,8 @@ jobs:
           context: ./springboot-app3
           file: ./springboot-app3/Dockerfile
           push: true
-          tags: jungwonalicia/springboot3-web3:latest
+          tags: asho227/springboot3-web3:latest
           platforms: linux/amd64
-
       # 5. 서버 배포 경로 변수 설정
       - name: Set deploy variables
         id: vars
@@ -49,7 +48,7 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
+          username: ${{ secrets.EC2_USER }} 
           key: ${{ secrets.EC2_SSH_KEY }}
           port: ${{ secrets.EC2_PORT }}
           timeout: 60s                      # 연결 타임아웃 짧게

@@ -18,7 +18,7 @@ public class UserController2 {
 
     @GetMapping("/")
     public String hello() {
-        return "아오 2222 그냥 2222 안녕하세요!";
+        return "아오 2222 그냥 3333 안녕하세요!";
     }
 
     @GetMapping("/mysql")
